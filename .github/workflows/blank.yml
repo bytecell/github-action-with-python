@@ -37,8 +37,7 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           # urllib3 에서 six 모듈 지원이 중단되어, 1.x 버전을 사용하도록 재설치
-          pip3 uninstall urllib3
-          pip3 install "urllib3<2"
+          pip3 install six
           if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
       - name: Run main.py
         run: |
